@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>  
+<div id="navbar-placeholder"></div>
+    <div class="contenedor-principal">
+        <!-- Lecturas Recomendadas -->
+        <div class="lecRec">
+            <h2>Lecturas Recomendadas</h2>
+            <div class="libro">
+                <img src="/portadas/elPrincipito.jpg" alt="Portada del libro 1" class="portada">
+                <div class="info">
+                    <h3>El Principito</h3>
+                    <p>Autor: Antoine de Saint-Exupéry</p>
+                    <p>Género: Ficción</p>
+                </div>
+            </div>
+            <div class="libro">
+                <img src="/portadas/1984.jpeg" alt="Portada del libro 2" class="portada">
+                <div class="info">
+                    <h3>Título: 1984</h3>
+                    <p>Autor: George Orwell</p>
+                    <p>Género: Distopía</p>
+                </div>
+            </div>
+            <div class="libro">
+                <img src="/portadas/cienAñosdeSoledad.jpeg" alt="Portada del libro 3" class="portada">
+                <div class="info">
+                    <h3>Cien Años de Soledad</h3>
+                    <p>Autor: Gabriel García Márquez</p>
+                    <p>Género: Realismo Mágico</p>
+                </div>
+            </div>
+            <button onclick="window.location='libros.html'">Ver todos</button>
+        </div>
+    
+    <!-- Contenedores del medio -->
+    <div class="contenedor-derecha">
+    <h2 style="margin-bottom: 8px;">Novedades Literarias</h2>
+    <p style="font-size: 0.98em; margin-bottom: 12px;">
+        <b>¡Hola, amantes de los libros!</b> Aquí celebramos la lectura con datos curiosos y alegría lectora.<br>
+        ¿Listo para sorprenderte?
+    </p>
+    <div style="text-align: left; font-size: 0.97em;">
+        <strong>¿Sabías que...?</strong>
+        <ul style="margin: 8px 0 12px 18px; padding-left: 0;">
+        <li>El libro más pequeño del mundo cabe en la punta de un lápiz.</li>
+        <li>Existe la "bibliocleptomanía": impulso de robar libros.</li>
+        <li>Shakespeare inventó más de 1.700 palabras que usamos hoy.</li>
+        <li>Hay un miedo irracional a los libros: "bibliophobia".</li>
+        <li>¡Un libro fue usado como arma en un crimen real!</li>
+        </ul>
+        <strong>Historias más raras que la ficción:</strong>
+        <ul style="margin: 8px 0 12px 18px; padding-left: 0;">
+        <li><b>Gadsby</b>: novela de 50.000 palabras sin la letra "e".</li>
+        <li>Agatha Christie escribía en la bañera.</li>
+        <li>El autor de Peter Pan donó sus derechos a un hospital infantil.</li>
+        </ul>
+        <div style="background: #232b2b; border-radius: 7px; padding: 10px 12px; margin-top: 10px;">
+        <b>Pregunta Random del Día:</b><br>
+        <span style="font-size:0.97em;">
+            Si tu libro favorito pudiera hablar, ¿qué diría primero?<br>
+            <i>¡Déjanos tu ocurrencia más loca en los comentarios!</i>
+        </span>
+        </div>
+    </div>
+    </div>
+    <!-- Contenedor derecha -->
+        <div class="contenedor2">
+        <h2>Estadísticas</h2>
+        <p>Libros: <b id="stat-libros">...</b></p>
+        <p>Autores: <b id="stat-autores">...</b></p>
+        <p>Géneros: <b id="stat-generos">...</b></p>
+        <hr>
+        <h3>Frase del día</h3>
+        <blockquote>
+            "El que lee mucho y anda mucho, ve mucho y sabe mucho." <br>
+            <span style="font-size:0.9em;">— Miguel de Cervantes</span>
+        </blockquote>
+        </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>

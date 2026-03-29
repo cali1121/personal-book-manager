@@ -1,0 +1,87 @@
+       <div class="encabezado"> <h1>Biblioteca De Libros</h1>
+        <h2>Explora, busca y disfruta de nuestro catalogo.</h2>
+    </div>
+    <div class="menu2">
+        <div class="menu-item"><a href="index.html">Inicio</a></div>
+        <div class="menu-item"><a href="libros.html">Libros</a></div>
+        <div class="menu-item"><a href="autores.html">Autores</a></div>
+        <div class="menu-item"><a href="generos.html">Generos</a></div>
+        <button onclick="abrirForm()">Acciones</button>
+    </div>
+
+    <!-- formulario flotante de acciones -->
+<div class="overlay" id="overlay">
+    <div class="form-container">
+        <button class="cerrar-btn" onclick="cerrarForm()">X</button>
+        <div id="menu-acciones">
+            <h2>¿Qué deseas hacer?</h2>
+            <button class="optionbutton" onclick="mostrarAgregarLibro()">Agregar libro</button>
+            <button class="optionbutton" onclick="mostrarEliminarLibro()">Eliminar libro</button> <br></br>
+            <button class="optionbutton" onclick="mostrarAgregarAutor()">Agregar autor</button>
+            <button class="optionbutton" onclick="mostrarEliminarAutor()">Eliminar autor</button> <br></br>
+            <button class="optionbutton" onclick="mostrarAgregarGenero()">Agregar genero</button>
+            <button class="optionbutton" onclick="mostrarEliminarGenero()">Eliminar genero</button> <br></br>
+        </div>
+        <!-- agregar libro -->
+        <div id="form-agregarLibro" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Formulario de Registro</h2>
+            <form id="form-libroadd" action="/libros/enviar" method="POST">
+                <input type="text" name="titulo" id="titulo" placeholder="Titulo del Libro" required><br></br>
+                <input type="text" name="autor" id="autor" placeholder="Autor del Libro" required><br></br>
+                <input type="text" name="genero" id="genero" placeholder="Genero del Libro" required><br></br>  
+                <select name="estado" id="estado" required>
+                    <option value="Por leer">Por leer</option>
+                    <option value="Leyendo">Leyendo</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <!-- eliminar libro -->
+        <div id="form-eliminarLibro" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Eliminar Libro</h2>
+            <form id="form-librodelete" action="/libros/eliminar" method="POST">
+                <input type="text" name="tituloEliminar" id="tituloEliminar" placeholder="Titulo del Libro a eliminar" required> <br></br>
+                <input type="submit" value="Eliminar">
+            </form>
+        </div>
+        <!-- agregar autor -->
+        <div id="form-agregarAutor" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Formulario de Registro</h2>
+            <form id="form-autoradd" action="/autores/enviar" method="POST">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Autor" required><br></br>
+                <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad del Autor" required><br></br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <!-- eliminar autor -->
+            <div id="form-eliminarAutor" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Eliminar Libro</h2>
+            <form id="form-autordelete" action="/autores/eliminar" method="POST">
+                <input type="text" name="nombreEliminar" id="nombreEliminar" placeholder="Nombre del Autor a Eliminar" required> <br></br>
+                <input type="submit" value="Eliminar">
+            </form>
+        </div>
+        <!-- agregar genero -->
+        <div id="form-agregarGenero" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Agregar Genero</h2>
+            <form id="form-generoadd" action="/generos/enviar" method="POST">
+                <input type="text" name="generoadd" id="generoadd" placeholder="Nombre del Genero" required><br></br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <!-- eliminar genero -->
+        <div id="form-eliminarGenero" style="display:none;">
+            <button onclick="volverMenu()" style="margin-bottom:10px;">← Atrás</button>
+            <h2>Eliminar Genero</h2>
+            <form id="form-generodelete" action="/generos/eliminar" method="POST">
+                <input type="text" name="generoEliminar" id="generoEliminar" placeholder="Nombre del Genero a Eliminar" required> <br></br>
+                <input type="submit" value="Eliminar">
+            </form>
+    </div>
+</div>

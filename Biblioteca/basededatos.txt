@@ -1,0 +1,30 @@
+create database proyecto;
+use proyecto;
+create table generos(
+id_genero int auto_increment primary key,
+nombre_genero varchar(100));
+
+create table autores(
+id_autor int auto_increment primary key,
+nombre_autor varchar (100));
+
+create table libros (
+id_libro int auto_increment primary key,
+titulo varchar(100), 
+id_autor int, foreign key (id_autor) references autores (id_autor),
+id_genero int, foreign key (id_genero) references generos (id_genero),
+estado_lectura varchar (50)
+);
+
+insert into libros (titulo, estado_lectura)
+values ('Libro1', 'Por leer');#Agregar valores a la tabla libros
+
+insert into autores (nombre_autor)
+values ('Autor1'); #Agregar valores a la tabla autores
+
+insert into generos (nombre_genero)
+values ('Genero1'); #Agregar valor a la tabla generos
+
+select * from libros;
+select * from autores;
+select * from generos;
