@@ -1,3 +1,24 @@
+**Personal Book Manager**
+Overview  
+Personal Book Manager is a web application designed to manage personal book collections. It provides tools to add, edit, delete, and list books, authors, and genres, with a clean interface and a MySQL-backed backend.
+
+Key Features
+Book management: add, update, delete, and filter by genre or reading status
+Author management: create, edit, and remove authors with full details
+Genre management: create, edit, and remove genres
+Real-time listings and search functionality
+Basic validations to ensure data consistency
+
+Technology Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js
+Database: MySQL
+
+Usage
+Access forms via the Actions menu to manage books, authors, and genres
+Search and filter records directly from listings
+Statistics panel shows real-time counts of books, authors, and genres
+
 **Welcome to the Digital Library**
 This platform allows you to manage books, authors, and genres in a simple and efficient way.
 Below you will find instructions on how to use all its features.
